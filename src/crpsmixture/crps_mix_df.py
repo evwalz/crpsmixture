@@ -56,3 +56,13 @@ def smooth_crps(preds, y, h, df=None):
     else:
         #return crps_tdis_lims(preds, y, h, df)
         return crps_t_int(preds, y, h, df)
+
+def crps_mixnorm_mc(Y_hat, y, sigma):
+    weights = np.ones(Y_hat.shape[0]) / Y_hat.shape[0]
+    if np.array(y).size == 1:  
+        return crpsmixGw(Y_hat, weights, y, sigma)
+    else:
+        crpssum = 0
+        for i in range(len(y)):
+            crpssum = crpssum + crpsmixGw(Y_hat[:, i], weights, y[i], sigma)
+        return crpssum / len(y)
