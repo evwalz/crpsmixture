@@ -52,7 +52,7 @@ setup(
     version='0.1',
     author='Eva-Maria Walz',
     author_email='evamaria.walz@gmx.de',
-    description='CRPS for mixture of normal and t distribution',
+    description='CRPS for smooth EasyUQ',
     long_description=open('README.md').read(),
     license='MIT',
     #install_requires=['numpy', 'pandas', 'scipy', 'progressbar', 'dc_stat_think', 'osqp', 'matplotlib'],
