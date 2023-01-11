@@ -1,6 +1,8 @@
 # CRPS for smooth EasyUQ
 
-Function to compute CRPS value of smooth EasyUQ.
+1. Function to compute CRPS value of smooth EasyUQ.
+2. Function to compute CRPS value of MC Dropout.
+3. Function to compute CRPS value of smooth ensemble data.
 
 # Installation
 
